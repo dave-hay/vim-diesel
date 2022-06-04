@@ -15,6 +15,7 @@ set hidden " can navigate away from buffer and it doesn't delete
 set noswapfile
 set nobackup
 set clipboard+=unnamedplus
+set cc=80
 
 " ------------------------------------------------------
 " Plugins
@@ -56,6 +57,8 @@ Plug 'nvim-telescope/telescope.nvim'
 " Github
 Plug 'tpope/vim-fugitive' 
 Plug 'tpope/vim-rhubarb'
+" tree
+Plug 'kyazdani42/nvim-tree.lua'
 
 call plug#end()
 set completeopt=menu,menuone,noselect
@@ -199,6 +202,26 @@ nnoremap <leader>ff <cmd>Telescope find_files<cr>
 nnoremap <leader>fg <cmd>Telescope live_grep<cr>
 nnoremap <leader>fb <cmd>Telescope buffers<cr>
 nnoremap <leader>fh <cmd>Telescope help_tags<cr>
+tnoremap <Esc> <C-\><C-n>
+" http://vimcasts.org/episodes/neovim-terminal-mappings/
+
+" move between panes
+nnoremap <leader>h <C-w>h
+nnoremap <leader>j <C-w>j
+nnoremap <leader>k <C-w>k
+nnoremap <leader>l <C-w>l
+nnoremap <leader>v <C-w>v <C-w>l :Alpha<CR>
+nnoremap <leader>wq :wq<CR>
+nnoremap <leader>so :source %<CR>
+nnoremap <leader>sa :w<CR>
+
+" Nvim Tree
+nnoremap <C-1> :NvimTreeToggle<CR>
+nnoremap <leader>r :NvimTreeRefresh<CR>
+nnoremap <leader>n :NvimTreeFindFile<CR>
+
+" alpha-nvim
+nnoremap <leader>a :Alpha<CR>
 
 " ------------------------------------------------------
 " Auto-commands
