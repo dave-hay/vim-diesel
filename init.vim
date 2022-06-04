@@ -184,9 +184,12 @@ highlight Normal guibg=none
 " ------------------------------------------------------
 let g:neoformat_enabled_typescript = ['prettier']
 let g:neoformat_enabled_rust = ['rustfmt']
-" let g:neoformat_enabled_ = ['']
-" let g:neoformat_enabled_ = ['']
-" let g:neoformat_enabled_ = ['']
+let g:neoformat_enabled_lua = ['stylua']
+let g:neoformat_enabled_css = ['css-beautify']
+let g:neoformat_enabled_html = ['html-beautify']
+let g:neoformat_enabled_javascript = ['js-beautify']
+let g:neoformat_enabled_json = ['prettier']
+let g:neoformat_enabled_python = ['yapf']
 
 " ------------------------------------------------------
 " Key Mapping
