@@ -8,7 +8,7 @@
 *.sw[po]
 tags
 TAGS
-.svn
+.svndone
 *.dSYM
 *.log
 *.dvi
@@ -32,3 +32,6 @@ Session.vim
 .vim/ftdetect/Dockerfile.vim
 .vim/syntax/Dockerfile.vim
 .vim/snippets/
+
+# my snippets
+todo.md
