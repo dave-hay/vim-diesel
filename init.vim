@@ -27,6 +27,7 @@ call plug#begin(stdpath('data') . './plugged')
 Plug 'neovim/nvim-lspconfig'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'cohama/lexima.vim'
+Plug 'sbdchd/neoformat'
 " Auto complete
 Plug 'hrsh7th/cmp-nvim-lsp'
 Plug 'hrsh7th/cmp-buffer'
@@ -179,6 +180,15 @@ colorscheme onedark
 highlight Normal guibg=none
 
 " ------------------------------------------------------
+" Neoformat
+" ------------------------------------------------------
+let g:neoformat_enabled_typescript = ['prettier']
+let g:neoformat_enabled_rust = ['rustfmt']
+" let g:neoformat_enabled_ = ['']
+" let g:neoformat_enabled_ = ['']
+" let g:neoformat_enabled_ = ['']
+
+" ------------------------------------------------------
 " Key Mapping
 " ------------------------------------------------------
 let mapleader = " "
@@ -186,6 +196,14 @@ nnoremap <leader>ff <cmd>Telescope find_files<cr>
 nnoremap <leader>fg <cmd>Telescope live_grep<cr>
 nnoremap <leader>fb <cmd>Telescope buffers<cr>
 nnoremap <leader>fh <cmd>Telescope help_tags<cr>
+
+" ------------------------------------------------------
+" Auto-commands
+" ------------------------------------------------------
+augroup fmt
+  autocmd!
+  autocmd BufWritePre * undojoin | Neoformat
+augroup END
 
 " ------------------------------------------------------
 " Etc. - Need to install or delete
