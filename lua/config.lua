@@ -4,9 +4,9 @@
 
 
 -- require'alpha'.setup(require'alpha.themes.startify'.opts)
-require'lspconfig'.pyright.setup{}
-require'lspconfig'.tsserver.setup{}
-require'lspconfig'.rust_analyzer.setup{}
+-- require'lspconfig'.pyright.setup{}
+-- require'lspconfig'.tsserver.setup{}
+-- require'lspconfig'.rust_analyzer.setup{}
 -- require('tree-sitter-typescript').typescript
 -- require('tree-sitter-typescript').tsx
 
@@ -17,3 +17,4 @@ require('lualine').setup {
 }
 
 require('config.alpha-nvim')
+-- require('config.nvim-cpm')
