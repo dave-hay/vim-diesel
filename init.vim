@@ -44,14 +44,6 @@ Plug 'saadparwaiz1/cmp_luasnip'
 " Plug 'hrsh7th/vim-vsnip'
 
 " ------------------------------------------------------
-" Appearance  
-" ------------------------------------------------------
-Plug 'goolord/alpha-nvim'
-Plug 'nvim-lualine/lualine.nvim'
-Plug 'joshdick/onedark.vim'
-Plug 'kyazdani42/nvim-web-devicons'
-
-" ------------------------------------------------------
 " Add-Ons
 " ------------------------------------------------------
 Plug 'nvim-lua/plenary.nvim'  " telescope dependency
@@ -61,11 +53,22 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rhubarb'
 " tree
 Plug 'kyazdani42/nvim-tree.lua'
+" term
+Plug 'akinsho/toggleterm.nvim'
+
+" ------------------------------------------------------
+" Appearance  
+" ------------------------------------------------------
+Plug 'goolord/alpha-nvim'
+Plug 'nvim-lualine/lualine.nvim'
+Plug 'joshdick/onedark.vim'
+Plug 'kyazdani42/nvim-web-devicons'
 
 call plug#end()
 set completeopt=menu,menuone,noselect
 
 lua require('config.cmp')
+lua require('toggleterm').setup{}
 " require("nvim-lsp-installer").setup{}
 lua require('config')
 
@@ -101,31 +104,34 @@ let g:neoformat_enabled_python = ['yapf']
 " Key Mapping
 " ------------------------------------------------------
 let mapleader = " "
-nnoremap <leader>ff <cmd>Telescope find_files<cr>
-nnoremap <leader>fg <cmd>Telescope live_grep<cr>
-nnoremap <leader>fb <cmd>Telescope buffers<cr>
-nnoremap <leader>fh <cmd>Telescope help_tags<cr>
-tnoremap <Esc> <C-\><C-n>
-" http://vimcasts.org/episodes/neovim-terminal-mappings/
-
+" General
+nnoremap <leader>wq :wq<CR>
+nnoremap <leader>qq :q<CR>
+nnoremap <leader>so :source %<CR>
+nnoremap <leader>ww :w<CR>
 " move between panes
 nnoremap <leader>h <C-w>h
 nnoremap <leader>j <C-w>j
 nnoremap <leader>k <C-w>k
 nnoremap <leader>l <C-w>l
-nnoremap <leader>v <C-w>v <C-w>l :Alpha<CR>
-nnoremap <leader>wq :wq<CR>
-nnoremap <leader>qq :q<CR>
-nnoremap <leader>so :source %<CR>
-nnoremap <leader>ww :w<CR>
+nnoremap <leader>v <C-w>v <C-w>l
+nnoremap <leader>va <C-w>v <C-w>l :Alpha<CR>
+nnoremap <leader>a :Alpha<CR>
+" Term
+" http://vimcasts.org/episodes/neovim-terminal-mappings/
+tnoremap <Esc> <C-\><C-n>
+nnoremap <C-`> :ToggleTerm<CR>
+tnoremap <Esc><Esc> <C-\><C-n> :ToggleTerm<CR>
+" Telescope
+nnoremap <leader>ff <cmd>Telescope find_files<cr>
+nnoremap <leader>fg <cmd>Telescope live_grep<cr>
+nnoremap <leader>fb <cmd>Telescope buffers<cr>
+nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 
 " Nvim Tree
 nnoremap <C-1> :NvimTreeToggle<CR>
 nnoremap <leader>r :NvimTreeRefresh<CR>
 nnoremap <leader>n :NvimTreeFindFile<CR>
-
-" alpha-nvim
-nnoremap <leader>a :Alpha<CR>
 
 " ------------------------------------------------------
 " Auto-commands
