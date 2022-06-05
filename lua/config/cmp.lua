@@ -5,6 +5,7 @@ end
 -- Setup nvim-cmp.
 local luasnip = require("luasnip")
 local cmp = require("cmp")
+local lspkind = require("lspkind")
 
 cmp.setup({
 	snippet = {
@@ -14,8 +15,14 @@ cmp.setup({
 			require("luasnip").lsp_expand(args.body) -- For `luasnip` users.
 		end,
 	},
+	formatting = {
+		format = lspkind.cmp_format({
+			mode = "symbol_text",
+			maxwidth = 50,
+		}),
+	},
 	window = {
-		-- completion = cmp.config.window.bordered(),
+		completion = cmp.config.window.bordered(),
 		-- documentation = cmp.config.window.bordered(),
 	},
 	mapping = cmp.mapping.preset.insert({
