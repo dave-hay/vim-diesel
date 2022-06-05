@@ -20,6 +20,10 @@
 - Code highlighting via [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
 - Code formatting [neoformat](https://github.com/sbdchd/neoformat)
 
+## Todo
+
+- set up faded text 'preview' completion with nvim-cmp and [lspkind](https://github.com/onsails/lspkind.nvim/pull/30)
+
 ## TBD
 
 - [markdown-preview.nvim](https://github.com/iamcco/markdown-preview.nvim)
