@@ -212,6 +212,7 @@ nnoremap <leader>k <C-w>k
 nnoremap <leader>l <C-w>l
 nnoremap <leader>v <C-w>v <C-w>l :Alpha<CR>
 nnoremap <leader>wq :wq<CR>
+nnoremap <leader>qq :q<CR>
 nnoremap <leader>so :source %<CR>
 nnoremap <leader>sa :w<CR>
 
