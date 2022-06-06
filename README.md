@@ -2,6 +2,8 @@
 
 ## Neovim configs who want to go 2fast2furious
 
+<img src="./images/vimdiesel.png" />
+
 ## Keymapping
 
 - `SPC-v` -> new vertical buffer
