@@ -19,6 +19,7 @@
 - Git integration [fugitive.vim](https://github.com/tpope/vim-fugitive)
 - Code highlighting via [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
 - Code formatting [neoformat](https://github.com/sbdchd/neoformat)
+- Terminal emulator with [toggleterm](https://github.com/akinsho/toggleterm.nvim)
 
 ## Todo
 
