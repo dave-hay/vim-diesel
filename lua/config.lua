@@ -8,6 +8,7 @@
 -- require('tree-sitter-typescript').typescript
 -- require('tree-sitter-typescript').tsx
 
+-- require("config.nvim-cpm")
 require("lualine").setup({
 	options = {
 		theme = "onedark",
@@ -16,4 +17,3 @@ require("lualine").setup({
 
 require("config.alpha-nvim")
 require("config.nvim-tree-config")
--- require('config.nvim-cpm')

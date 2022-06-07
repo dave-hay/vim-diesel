@@ -26,6 +26,7 @@ call plug#begin(stdpath('data') . './plugged')
 " ------------------------------------------------------
 " Text editor ish (lsp, linting, etc.)
 " ------------------------------------------------------
+Plug 'williamboman/nvim-lsp-installer'
 Plug 'neovim/nvim-lspconfig'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'cohama/lexima.vim'
@@ -67,9 +68,9 @@ Plug 'kyazdani42/nvim-web-devicons'
 call plug#end()
 set completeopt=menu,menuone,noselect
 
-lua require('config.cmp')
+lua require("nvim-lsp-installer").setup{}
+lua require('config.nvim-cmp')
 lua require('toggleterm').setup{}
-" require("nvim-lsp-installer").setup{}
 lua require('config')
 
 " ------------------------------------------------------
@@ -99,6 +100,7 @@ let g:neoformat_enabled_html = ['html-beautify']
 let g:neoformat_enabled_javascript = ['js-beautify']
 let g:neoformat_enabled_json = ['prettier']
 let g:neoformat_enabled_python = ['yapf']
+let g:neoformat_enabled_go = ['gofmt']
 
 " ------------------------------------------------------
 " Key Mapping
