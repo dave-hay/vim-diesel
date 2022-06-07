@@ -100,7 +100,7 @@ let g:neoformat_enabled_html = ['html-beautify']
 let g:neoformat_enabled_javascript = ['js-beautify']
 let g:neoformat_enabled_json = ['prettier']
 let g:neoformat_enabled_python = ['yapf']
-let g:neoformat_enabled_go = ['gofmt']
+let g:neoformat_enabled_go = ['gofmt, goimports']
 
 " ------------------------------------------------------
 " Key Mapping
