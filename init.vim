@@ -57,6 +57,8 @@ Plug 'tpope/vim-rhubarb'
 Plug 'kyazdani42/nvim-tree.lua'
 " term
 Plug 'akinsho/toggleterm.nvim'
+" firevim
+Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
 
 " ------------------------------------------------------
 " Appearance  

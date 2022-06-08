@@ -22,6 +22,7 @@
 - Code highlighting via [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
 - Code formatting [neoformat](https://github.com/sbdchd/neoformat)
 - Terminal emulator with [toggleterm](https://github.com/akinsho/toggleterm.nvim)
+- Vim in chrome with [firevim](https://github.com/glacambre/firenvim)
 
 ## Todo
 
