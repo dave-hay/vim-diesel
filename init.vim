@@ -41,6 +41,7 @@ Plug 'onsails/lspkind.nvim'
 " Snippits
 Plug 'L3MON4D3/LuaSnip'
 Plug 'saadparwaiz1/cmp_luasnip'
+" Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 " Plug 'hrsh7th/cmp-vsnip'
 " Plug 'hrsh7th/vim-vsnip'
 
@@ -63,6 +64,7 @@ Plug 'akinsho/toggleterm.nvim'
 Plug 'goolord/alpha-nvim'
 Plug 'nvim-lualine/lualine.nvim'
 Plug 'joshdick/onedark.vim'
+" Plug 'morhetz/gruvbox'
 Plug 'kyazdani42/nvim-web-devicons'
 
 call plug#end()

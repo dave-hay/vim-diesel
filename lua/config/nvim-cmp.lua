@@ -99,6 +99,11 @@ require("lspconfig")["pyright"].setup({
 })
 require("lspconfig")["tsserver"].setup({
 	capabilities = capabilities,
+	filetypes = { "typescript", "typescriptreact", "typescript.tsx" },
+})
+require("lspconfig")["eslint"].setup({
+	capabilities = capabilities,
+	filetypes = { "javascript", "javascriptreact", "javascript.jsx" },
 })
 require("lspconfig")["rust_analyzer"].setup({
 	capabilities = capabilities,
