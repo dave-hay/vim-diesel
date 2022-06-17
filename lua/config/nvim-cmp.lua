@@ -111,6 +111,9 @@ require("lspconfig")["rust_analyzer"].setup({
 require("lspconfig")["tailwindcss"].setup({
 	capabilities = capabilities,
 })
+require("lspconfig")["marksman"].setup({
+	capabilities = capabilities,
+})
 require("lspconfig")["gopls"].setup({
 	cmd = { "gopls", "serve" },
 	filetypes = { "go", "gomod" },

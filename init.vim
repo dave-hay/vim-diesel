@@ -17,6 +17,7 @@ set nobackup
 set clipboard+=unnamedplus
 set cc=80
 set pumheight=5
+" set guifont=Fira_Code:h18 " for firenvim
 
 " ------------------------------------------------------
 " Plugins
@@ -41,6 +42,9 @@ Plug 'onsails/lspkind.nvim'
 " Snippits
 Plug 'L3MON4D3/LuaSnip'
 Plug 'saadparwaiz1/cmp_luasnip'
+" comment
+Plug 'tpope/vim-commentary/'
+Plug 'JoosepAlviste/nvim-ts-context-commentstring'
 " Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 " Plug 'hrsh7th/cmp-vsnip'
 " Plug 'hrsh7th/vim-vsnip'
@@ -58,7 +62,7 @@ Plug 'kyazdani42/nvim-tree.lua'
 " term
 Plug 'akinsho/toggleterm.nvim'
 " firevim
-Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
+" Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
 
 " ------------------------------------------------------
 " Appearance  
@@ -72,7 +76,7 @@ Plug 'kyazdani42/nvim-web-devicons'
 call plug#end()
 set completeopt=menu,menuone,noselect
 
-lua require("nvim-lsp-installer").setup{}
+lua require("nvim-lsp-installer").setup{automatic_installation = true}
 lua require('config.nvim-cmp')
 lua require('toggleterm').setup{}
 lua require('config')
@@ -100,8 +104,8 @@ let g:neoformat_enabled_typescript = ['prettier']
 let g:neoformat_enabled_rust = ['rustfmt']
 let g:neoformat_enabled_lua = ['stylua']
 let g:neoformat_enabled_css = ['css-beautify']
-let g:neoformat_enabled_html = ['html-beautify']
-let g:neoformat_enabled_javascript = ['js-beautify']
+let g:neoformat_enabled_html = ['html-beautify, prettier']
+let g:neoformat_enabled_javascript = ['js-beautify, prettier']
 let g:neoformat_enabled_json = ['prettier']
 let g:neoformat_enabled_python = ['yapf']
 let g:neoformat_enabled_go = ['gofmt, goimports']
