@@ -48,6 +48,7 @@ Plug 'JoosepAlviste/nvim-ts-context-commentstring'
 " Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 " Plug 'hrsh7th/cmp-vsnip'
 " Plug 'hrsh7th/vim-vsnip'
+Plug 'fatih/vim-go', {'do': ':GoUpdateBinaries'}
 
 " ------------------------------------------------------
 " Add-Ons
