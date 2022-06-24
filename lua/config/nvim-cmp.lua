@@ -121,6 +121,9 @@ require("lspconfig")["vimls"].setup({
 require("lspconfig")["sumneko_lua"].setup({
 	capabilities = capabilities,
 })
+require("lspconfig")["bashls"].setup({
+	capabilities = capabilities,
+})
 require("lspconfig")["gopls"].setup({
 	cmd = { "gopls", "serve" },
 	filetypes = { "go", "gomod" },
