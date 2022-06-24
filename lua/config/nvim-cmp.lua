@@ -1,3 +1,4 @@
+-- Set up for super tab
 local has_words_before = function()
 	local line, col = unpack(vim.api.nvim_win_get_cursor(0))
 	return col ~= 0 and vim.api.nvim_buf_get_lines(0, line - 1, line, true)[1]:sub(col, col):match("%s") == nil
@@ -9,10 +10,8 @@ local lspkind = require("lspkind")
 
 cmp.setup({
 	snippet = {
-		-- REQUIRED - you must specify a snippet engine
 		expand = function(args)
-			-- vim.fn["vsnip#anonymous"](args.body) -- For `vsnip` users.
-			require("luasnip").lsp_expand(args.body) -- For `luasnip` users.
+			require("luasnip").lsp_expand(args.body)
 		end,
 	},
 	formatting = {
@@ -55,8 +54,7 @@ cmp.setup({
 	}),
 	sources = cmp.config.sources({
 		{ name = "nvim_lsp" },
-		-- { name = 'vsnip' }, -- For vsnip users.
-		{ name = "luasnip" }, -- For luasnip users.
+		{ name = "luasnip" },
 	}, {
 		{ name = "buffer" },
 	}),
@@ -73,6 +71,9 @@ cmp.setup.filetype("gitcommit", {
 
 -- Use buffer source for `/` (if you enabled `native_menu`, this won't work anymore).
 cmp.setup.cmdline("/", {
+	-- view = {
+	-- 	entries = { name = "wildmenu", separator = "|" },
+	-- },
 	mapping = cmp.mapping.preset.cmdline(),
 	sources = {
 		{ name = "buffer" },
@@ -112,6 +113,12 @@ require("lspconfig")["tailwindcss"].setup({
 	capabilities = capabilities,
 })
 require("lspconfig")["marksman"].setup({
+	capabilities = capabilities,
+})
+require("lspconfig")["vimls"].setup({
+	capabilities = capabilities,
+})
+require("lspconfig")["sumneko_lua"].setup({
 	capabilities = capabilities,
 })
 require("lspconfig")["gopls"].setup({

@@ -9,6 +9,15 @@
 -- require('tree-sitter-typescript').tsx
 
 -- require("config.nvim-cpm")
+--
+require("nvim-treesitter.configs").setup({
+	ensure_installed = "all",
+	highlight = {
+		enable = true,
+	},
+})
+--
+--
 require("lualine").setup({
 	options = {
 		theme = "onedark",

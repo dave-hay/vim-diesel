@@ -14,9 +14,9 @@ dashboard.section.header.val = {
 
 -- Set menu
 dashboard.section.buttons.val = {
-	dashboard.button("Leader f f", "  > Find file", ":Leaderf file --popup<CR>"),
-	dashboard.button("Leader f r", "  > Recent files", ":Leaderf mru --popup<CR>"),
-	dashboard.button("Leader f g", "  > Project grep", ":Leaderf rg --popup<CR>"),
+	dashboard.button("Leader f f", "  > Find file", ":Telescope find_files<CR>"),
+	dashboard.button("Leader f r", "  > Recent files", ":Telescope oldfiles<CR>"),
+	dashboard.button("Leader f g", "  > Project grep", ":Telescope live_grep<CR>"),
 	dashboard.button("u", "  > Update plugins", ":PlugUpdate<CR>"),
 	dashboard.button("e", "  > New file", ":enew <CR>"),
 	dashboard.button("q", "  > Quit NVIM", ":qa<CR>"),
