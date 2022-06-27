@@ -92,36 +92,43 @@ cmp.setup.cmdline(":", {
 
 -- Setup lspconfig.
 local util = require("lspconfig/util")
+local lspconfig = require("lspconfig")
 
 local capabilities = require("cmp_nvim_lsp").update_capabilities(vim.lsp.protocol.make_client_capabilities())
 -- Replace <YOUR_LSP_SERVER> with each lsp server you've enabled.
-require("lspconfig")["pyright"].setup({
-	capabilities = capabilities,
-})
-require("lspconfig")["tsserver"].setup({
-	capabilities = capabilities,
-	filetypes = { "typescript", "typescriptreact", "typescript.tsx" },
-})
-require("lspconfig")["eslint"].setup({
-	capabilities = capabilities,
-	filetypes = { "javascript", "javascriptreact", "javascript.jsx" },
-})
-require("lspconfig")["rust_analyzer"].setup({
-	capabilities = capabilities,
-})
-require("lspconfig")["tailwindcss"].setup({
-	capabilities = capabilities,
-})
-require("lspconfig")["marksman"].setup({
-	capabilities = capabilities,
-})
-require("lspconfig")["vimls"].setup({
-	capabilities = capabilities,
-})
+--
+local servers = { "pyright", "tsserver", "rust_analyzer", "marksman", "vimls", "bashls" }
+for _, lsp in ipairs(servers) do
+	lspconfig[lsp].setup({
+		capabilities = capabilities,
+	})
+end
+--
+-- require("lspconfig")["tsserver"].setup({
+-- 	capabilities = capabilities,
+-- 	filetypes = { "typescript", "typescriptreact", "typescript.tsx" },
+-- })
 require("lspconfig")["sumneko_lua"].setup({
-	capabilities = capabilities,
-})
-require("lspconfig")["bashls"].setup({
+	settings = {
+		Lua = {
+			runtime = {
+				-- Tell the language server which version of Lua you're using (most likely LuaJIT in the case of Neovim)
+				version = "LuaJIT",
+			},
+			diagnostics = {
+				-- Get the language server to recognize the `vim` global
+				globals = { "vim" },
+			},
+			workspace = {
+				-- Make the server aware of Neovim runtime files
+				library = vim.api.nvim_get_runtime_file("", true),
+			},
+			-- Do not send telemetry data containing a randomized but unique identifier
+			telemetry = {
+				enable = false,
+			},
+		},
+	},
 	capabilities = capabilities,
 })
 require("lspconfig")["gopls"].setup({
