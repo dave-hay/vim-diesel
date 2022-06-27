@@ -23,6 +23,8 @@
 - Code formatting [neoformat](https://github.com/sbdchd/neoformat)
 - Terminal emulator with [toggleterm](https://github.com/akinsho/toggleterm.nvim)
 - Vim in chrome with [firevim](https://github.com/glacambre/firenvim)
+- Auto syntax closer with [nvim-autopairs](https://github.com/windwp/nvim-autopairs)
+- Git changes with [vim-gitgutter](https://github.com/airblade/vim-gitgutter)
 
 ## Todo
 

@@ -45,10 +45,11 @@ Plug 'saadparwaiz1/cmp_luasnip'
 " comment
 Plug 'tpope/vim-commentary/'
 Plug 'JoosepAlviste/nvim-ts-context-commentstring'
-" Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 " Plug 'hrsh7th/cmp-vsnip'
 " Plug 'hrsh7th/vim-vsnip'
 Plug 'fatih/vim-go', {'do': ':GoUpdateBinaries'}
+" auto pairs
+Plug 'windwp/nvim-autopairs'
 
 " ------------------------------------------------------
 " Add-Ons
@@ -58,6 +59,7 @@ Plug 'nvim-telescope/telescope.nvim'
 " Github
 Plug 'tpope/vim-fugitive' 
 Plug 'tpope/vim-rhubarb'
+Plug 'airblade/vim-gitgutter'
 " tree
 Plug 'kyazdani42/nvim-tree.lua'
 " term
@@ -81,6 +83,7 @@ lua require("nvim-lsp-installer").setup{automatic_installation = true}
 lua require('config.nvim-cmp')
 lua require('toggleterm').setup{}
 lua require('config')
+lua require('nvim-autopairs').setup{}
 
 " ------------------------------------------------------
 " Appearance
