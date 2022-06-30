@@ -120,7 +120,7 @@ let g:neoformat_enabled_go = ['gofmt, goimports']
 let mapleader = " "
 " General
 nnoremap <leader>wq :wq<CR>
-nnoremap <leader>qq :q<CR>
+nnoremap <leader>qq :q!<CR>
 nnoremap <leader>so :source %<CR>
 nnoremap <leader>ww :w<CR>
 " move between panes
@@ -128,14 +128,14 @@ nnoremap <leader>h <C-w>h
 nnoremap <leader>j <C-w>j
 nnoremap <leader>k <C-w>k
 nnoremap <leader>l <C-w>l
-nnoremap <leader>v <C-w>v <C-w>l
+nnoremap <leader>vv <C-w>v
 nnoremap <leader>va <C-w>v <C-w>l :Alpha<CR>
-nnoremap <leader>a :Alpha<CR>
+nnoremap <leader>hm :Alpha<CR>
 " Term
 " http://vimcasts.org/episodes/neovim-terminal-mappings/
 tnoremap <Esc> <C-\><C-n>
-nnoremap <C-`> :ToggleTerm<CR>
-tnoremap <Esc><Esc> <C-\><C-n> :ToggleTerm<CR>
+nnoremap <C-`> :ToggleTerm<CR>i
+tnoremap <C-`> <C-\><C-n> :ToggleTerm<CR>
 " Telescope
 nnoremap <leader>ff <cmd>Telescope find_files<cr>
 nnoremap <leader>fg <cmd>Telescope live_grep<cr>
@@ -147,6 +147,13 @@ nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 nnoremap <C-1> :NvimTreeToggle<CR>
 nnoremap <leader>r :NvimTreeRefresh<CR>
 nnoremap <leader>n :NvimTreeFindFile<CR>
+
+" wrap string in X
+nnoremap <leader>wd vedi ""<esc>hp
+nnoremap <leader>ws vedi ''<esc>hp
+nnoremap <leader>wp vedi ()esc>hp
+nnoremap <leader>wc vedi {}<esc>hp
+nnoremap <leader>wb vedi []<esc>hp
 
 " ------------------------------------------------------
 " Auto-commands
