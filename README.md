@@ -1,5 +1,11 @@
 # Vim Diesel
 
+## Moving to lua guides
+
+- [Moving to Lua](https://icyphox.sh/blog/nvim-lua/)
+- https://alpha2phi.medium.com/neovim-for-beginners-init-lua-45ff91f741cb
+  https://github.com/nanotee/nvim-lua-guide
+
 ## Neovim configs who want to go 2fast2furious
 
 <img src="./images/vimdiesel.png" />
