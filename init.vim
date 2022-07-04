@@ -64,8 +64,8 @@ Plug 'airblade/vim-gitgutter'
 Plug 'kyazdani42/nvim-tree.lua'
 " term
 Plug 'akinsho/toggleterm.nvim'
-" firevim
-" Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
+" markdown-preview
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
 
 " ------------------------------------------------------
 " Appearance  
@@ -113,6 +113,7 @@ let g:neoformat_enabled_javascript = ['prettier']
 let g:neoformat_enabled_json = ['prettier']
 let g:neoformat_enabled_python = ['yapf']
 let g:neoformat_enabled_go = ['gofmt, goimports']
+let g:neoformat_enabled_markdown = ['prettier']
 
 " ------------------------------------------------------
 " Key Mapping
@@ -134,7 +135,7 @@ nnoremap <leader>hm :Alpha<CR>
 " Term
 " http://vimcasts.org/episodes/neovim-terminal-mappings/
 tnoremap <Esc> <C-\><C-n>
-nnoremap <C-`> :ToggleTerm<CR>i
+nnoremap <C-`> :ToggleTerm<CR>
 tnoremap <C-`> <C-\><C-n> :ToggleTerm<CR>
 " Telescope
 nnoremap <leader>ff <cmd>Telescope find_files<cr>
