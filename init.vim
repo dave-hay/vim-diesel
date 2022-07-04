@@ -150,11 +150,11 @@ nnoremap <leader>r :NvimTreeRefresh<CR>
 nnoremap <leader>n :NvimTreeFindFile<CR>
 
 " wrap string in X
-nnoremap <leader>wd vedi ""<esc>hp
-nnoremap <leader>ws vedi ''<esc>hp
-nnoremap <leader>wp vedi ()esc>hp
-nnoremap <leader>wc vedi {}<esc>hp
-nnoremap <leader>wb vedi []<esc>hp
+nnoremap <leader>wd vEdi ""<esc>hp
+nnoremap <leader>ws vEdi ''<esc>hp
+nnoremap <leader>wp vEdi ()<esc>hp
+nnoremap <leader>wc vEdi {}<esc>hp
+nnoremap <leader>wb vEdi []<esc>hp
 
 " ------------------------------------------------------
 " Auto-commands
