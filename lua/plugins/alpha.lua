@@ -17,7 +17,7 @@ dashboard.section.buttons.val = {
 	dashboard.button("Leader f f", "  > Find file", ":Telescope find_files<CR>", nil),
 	dashboard.button("Leader f r", "  > Recent files", ":Telescope oldfiles<CR>", nil),
 	dashboard.button("Leader f g", "  > Project grep", ":Telescope live_grep<CR>", nil),
-	dashboard.button("u", "  > Update plugins", ":PlugUpgrade<CR> <bar> :PlugUpdate<CR>", nil),
+	dashboard.button("u", "  > Update plugins", ":PackerSync<CR> <bar> :PackerCompile<CR>", nil),
 	dashboard.button("e", "  > New file", ":enew <CR>", nil),
 	dashboard.button("q", "  > Quit NVIM", ":qa<CR>", nil),
 }

@@ -1,28 +1,23 @@
--- local Plug = vim.fn['plug#']
--- vim.call('plug#end')
+require("impatient")
+--
+-- Plugins configs
+--
+require("nvim-lsp-installer").setup{automatic_installation = true}
+require('plugins.lsp_cmp')
 
--- require'alpha'.setup(require'alpha.themes.startify'.opts)
--- require'lspconfig'.pyright.setup{}
--- require'lspconfig'.tsserver.setup{}
--- require'lspconfig'.rust_analyzer.setup{}
--- require('tree-sitter-typescript').typescript
--- require('tree-sitter-typescript').tsx
-
--- require("config.nvim-cpm")
---
-require("nvim-treesitter.configs").setup({
-	ensure_installed = "all",
-	highlight = {
-		enable = true,
-	},
-})
---
---
+-- theme
+-- https://github.com/folke/tokyonight.nvim
+vim.g.tokyonight_style = "night"
+vim.g.tokyonight_italic_functions = true
+vim.g.tokyonight_transparent = true
+vim.g.tokyonight_sidebars = { "qf", "vista_kind", "terminal", "packer" }
+vim.cmd[[colorscheme tokyonight]]
 require("lualine").setup({
-	options = {
-		theme = "onedark",
-	},
+ options = {
+ theme = "onedark",
+ },
 })
 
-require("config.alpha-nvim")
-require("config.nvim-tree-config")
+-- if onedark wanted
+-- require('onedark').setup { transparent = true }
+-- require('onedark').load()

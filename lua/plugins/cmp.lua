@@ -1,3 +1,6 @@
+-- https://github.com/creativenull/nvim-config/blob/022de3ad3ebb9c6994adfb5d8c81d78df83d3b89/lua/cnull/plugins/autocompletions/cmp.lua
+-- https://github.com/baldore/dotfiles/blob/master/.config/nvim/lua/lspsetup/init.lua#L183-L255
+-- https://xlwe.medium.com/setting-up-neovim-for-web-development-70c57c3d7d61
 -- Set up for super tab
 local has_words_before = function()
 	local line, col = unpack(vim.api.nvim_win_get_cursor(0))
@@ -55,7 +58,7 @@ cmp.setup({
 	sources = cmp.config.sources({
 		{ name = "nvim_lsp" },
 		{ name = "luasnip" },
-	}, {
+		{ name = "path" },
 		{ name = "buffer" },
 	}),
 })
@@ -90,50 +93,3 @@ cmp.setup.cmdline(":", {
 	}),
 })
 
--- Setup lspconfig.
-local util = require("lspconfig/util")
-local lspconfig = require("lspconfig")
-
-local capabilities = require("cmp_nvim_lsp").update_capabilities(vim.lsp.protocol.make_client_capabilities())
--- Replace <YOUR_LSP_SERVER> with each lsp server you've enabled.
---
-local servers = { "pyright", "tsserver", "rust_analyzer", "marksman", "vimls", "bashls" }
-for _, lsp in ipairs(servers) do
-	lspconfig[lsp].setup({
-		capabilities = capabilities,
-	})
-end
---
--- require("lspconfig")["tsserver"].setup({
--- 	capabilities = capabilities,
--- 	filetypes = { "typescript", "typescriptreact", "typescript.tsx" },
--- })
-require("lspconfig")["sumneko_lua"].setup({
-	settings = {
-		Lua = {
-			runtime = {
-				-- Tell the language server which version of Lua you're using (most likely LuaJIT in the case of Neovim)
-				version = "LuaJIT",
-			},
-			diagnostics = {
-				-- Get the language server to recognize the `vim` global
-				globals = { "vim" },
-			},
-			workspace = {
-				-- Make the server aware of Neovim runtime files
-				library = vim.api.nvim_get_runtime_file("", true),
-			},
-			-- Do not send telemetry data containing a randomized but unique identifier
-			telemetry = {
-				enable = false,
-			},
-		},
-	},
-	capabilities = capabilities,
-})
-require("lspconfig")["gopls"].setup({
-	cmd = { "gopls", "serve" },
-	filetypes = { "go", "gomod" },
-	root_dir = util.root_pattern("go.work", "go.mod", ".git"),
-	capabilities = capabilities,
-})

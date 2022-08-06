@@ -1,0 +1,2 @@
+-- require('plugins.packer_setup')
+-- require('plugins.config')
