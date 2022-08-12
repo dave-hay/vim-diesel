@@ -20,6 +20,7 @@ local servers = {
 	"ccls",
 	"jsonls",
 	"quick_lint_js",
+	"svelte",
 }
 for _, lsp in ipairs(servers) do
 	lspconfig[lsp].setup({

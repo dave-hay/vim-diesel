@@ -17,4 +17,5 @@ ls.config.set_config({
 ls.filetype_extend("javascript", { "html" })
 ls.filetype_extend("javascriptreact", { "html" })
 ls.filetype_extend("typescriptreact", { "html" })
+ls.filetype_extend("svelte", { "html" })
 require("luasnip/loaders/from_vscode").lazy_load()

@@ -11,6 +11,11 @@ local luasnip = require("luasnip")
 local cmp = require("cmp")
 local lspkind = require("lspkind")
 
+-- exit if cmp isn't found
+if cmp == nil then
+	return
+end
+
 cmp.setup({
 	snippet = {
 		expand = function(args)
@@ -92,4 +97,3 @@ cmp.setup.cmdline(":", {
 		{ name = "cmdline" },
 	}),
 })
-
