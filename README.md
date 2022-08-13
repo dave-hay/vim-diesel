@@ -2,6 +2,8 @@
 
 ## Neovim configs who want to go 2fast2furious
 
+<img src="./images/hero.png" />
+
 <img src="./images/vimdiesel.png" />
 
 ## Keymapping
