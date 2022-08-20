@@ -10,7 +10,7 @@ local lspconfig = require("lspconfig")
 local servers = {
 	"bashls",
 	"cssls",
-	"dockerls",
+	-- "dockerls",
 	"html",
 	"jsonls",
 	"marksman",

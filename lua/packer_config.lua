@@ -101,9 +101,10 @@ return require("packer").startup(function(use)
 
 	use({
 		"windwp/nvim-autopairs",
-		config = function()
+		config = "require('plugins.autopairs')",
+		--[[ config = function()
 			require("nvim-autopairs").setup({})
-		end,
+		end, ]]
 	})
 
 	------------------------------------------------------
@@ -113,6 +114,13 @@ return require("packer").startup(function(use)
 		"nvim-telescope/telescope.nvim",
 		requires = { "nvim-lua/plenary.nvim" },
 		config = "require('plugins.telescope')",
+	})
+
+	-- need for lazygit
+	use({
+		"akinsho/toggleterm.nvim",
+		tag = "v2.*",
+		config = "require('plugins.toggle_term')",
 	})
 
 	use({
@@ -170,17 +178,12 @@ end)
 -- use({ "romgrk/barbar.nvim", requires = { "kykzdani42/nvim-web-devicons" } })
 -- use({ "karb94/neoscroll.nvim", config = "require('plugins.neoscroll')" })
 -- terminal
---[[ use({
-  "akinsho/toggleterm.nvim",
-  tag = "v2.*",
-  config = "require('plugins.toggle_term')",
-}) ]]
 
-	--[[ use({
+--[[ use({
 		"folke/todo-comments.nvim",
 		requires = "nvim-lua/plenary.nvim",
 		config = function()
 			require("todo-comments").setup({})
 		end,
 	}) ]]
-	-- config = "require('plugins.todo_comments')",
+-- config = "require('plugins.todo_comments')",
