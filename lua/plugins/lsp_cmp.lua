@@ -14,7 +14,7 @@ local servers = {
 	"vimls",
 	"bashls",
 	"dockerls",
-	"tailwindcss",
+	-- "tailwindcss",
 	"taplo",
 	"html",
 	"ccls",
