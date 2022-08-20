@@ -132,24 +132,14 @@ return require("packer").startup(function(use)
 		config = [[require('plugins.nvim-tree-config')]],
 	})
 
-	-- terminal
-	use({
-		"akinsho/toggleterm.nvim",
-		tag = "v2.*",
-		config = "require('plugins.toggle_term')",
-		--[[ config = function()
-			require("toggleterm").setup()
-		end, ]]
-	})
-
-	use({
+	--[[ use({
 		"folke/todo-comments.nvim",
 		requires = "nvim-lua/plenary.nvim",
 		config = function()
 			require("todo-comments").setup({})
 		end,
-		-- config = "require('plugins.todo_comments')",
-	})
+	}) ]]
+	-- config = "require('plugins.todo_comments')",
 	------------------------------------------------------
 	-- Appearance
 	------------------------------------------------------
@@ -187,3 +177,9 @@ end)
 -- Tabs at top
 -- use({ "romgrk/barbar.nvim", requires = { "kykzdani42/nvim-web-devicons" } })
 -- use({ "karb94/neoscroll.nvim", config = "require('plugins.neoscroll')" })
+-- terminal
+--[[ use({
+  "akinsho/toggleterm.nvim",
+  tag = "v2.*",
+  config = "require('plugins.toggle_term')",
+}) ]]
