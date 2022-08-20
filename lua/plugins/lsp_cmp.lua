@@ -8,19 +8,20 @@ local lspconfig = require("lspconfig")
 
 --
 local servers = {
-	"pyright",
-	"rust_analyzer",
-	"marksman",
-	"vimls",
 	"bashls",
+	"cssls",
 	"dockerls",
-	-- "tailwindcss",
-	"taplo",
 	"html",
-	"ccls",
 	"jsonls",
+	"marksman",
+	"pyright",
 	"quick_lint_js",
-	"svelte",
+	-- "vimls",
+	-- "tailwindcss",
+	-- "taplo",
+	-- "ccls",
+	-- "rust_analyzer",
+	-- "svelte",
 }
 for _, lsp in ipairs(servers) do
 	lspconfig[lsp].setup({

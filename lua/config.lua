@@ -2,7 +2,9 @@ require("impatient")
 --
 -- Plugins configs
 --
-require("nvim-lsp-installer").setup({ automatic_installation = true })
+require("mason").setup()
+require("mason-lspconfig").setup()
+-- require("nvim-lsp-installer").setup({ automatic_installation = true })
 require("plugins.lsp_cmp")
 require("plugins.neoformat")
 -- theme
