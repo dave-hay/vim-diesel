@@ -132,14 +132,6 @@ return require("packer").startup(function(use)
 		config = [[require('plugins.nvim-tree-config')]],
 	})
 
-	--[[ use({
-		"folke/todo-comments.nvim",
-		requires = "nvim-lua/plenary.nvim",
-		config = function()
-			require("todo-comments").setup({})
-		end,
-	}) ]]
-	-- config = "require('plugins.todo_comments')",
 	------------------------------------------------------
 	-- Appearance
 	------------------------------------------------------
@@ -183,3 +175,12 @@ end)
   tag = "v2.*",
   config = "require('plugins.toggle_term')",
 }) ]]
+
+	--[[ use({
+		"folke/todo-comments.nvim",
+		requires = "nvim-lua/plenary.nvim",
+		config = function()
+			require("todo-comments").setup({})
+		end,
+	}) ]]
+	-- config = "require('plugins.todo_comments')",
