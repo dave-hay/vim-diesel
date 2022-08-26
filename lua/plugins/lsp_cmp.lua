@@ -9,8 +9,10 @@ local lspconfig = require("lspconfig")
 --
 local servers = {
 	"bashls",
+	"ccls",
+	-- "clangd",
 	"cssls",
-	-- "dockerls",
+	"dockerls",
 	"html",
 	"jsonls",
 	"marksman",
@@ -19,7 +21,6 @@ local servers = {
 	-- "vimls",
 	-- "tailwindcss",
 	-- "taplo",
-	-- "ccls",
 	-- "rust_analyzer",
 	-- "svelte",
 }
