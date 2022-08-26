@@ -6,6 +6,7 @@ require("mason").setup()
 require("mason-lspconfig").setup()
 -- require("nvim-lsp-installer").setup({ automatic_installation = true })
 require("plugins.lsp_cmp")
+-- require("plugins.formatter")
 require("plugins.neoformat")
 -- theme
 -- https://github.com/folke/tokyonight.nvim

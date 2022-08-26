@@ -52,7 +52,14 @@ g.gitgutter_map_keys = 0
 -- set.nobackup = true
 -- set.errorbells = false
 --
+
 cmd([[augroup fmt
   autocmd!
   autocmd BufWritePre * undojoin | Neoformat
 augroup END]])
+
+--[[ cmd([[augroup FormatAutogroup
+  autocmd!
+  autocmd BufWritePost * FormatWrite
+augroup END]
+]]

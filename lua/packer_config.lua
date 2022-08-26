@@ -79,6 +79,8 @@ return require("packer").startup(function(use)
 		config = [[require('plugins.luasnip')]],
 	})
 
+	-- Formatting
+	use({ "mhartington/formatter.nvim" })
 	use("cohama/lexima.vim")
 	use("sbdchd/neoformat")
 
@@ -86,9 +88,6 @@ return require("packer").startup(function(use)
 	-- Text Formatting
 	----------------------------------------------------------
 	use("onsails/lspkind.nvim")
-
-	-- Formatting
-	use("mhartington/formatter.nvim")
 
 	use("godlygeek/tabular")
 
