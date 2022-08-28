@@ -148,7 +148,6 @@ return require("packer").startup(function(use)
 		requires = { "kyazdani42/nvim-web-devicons", opt = true },
 		config = "require('plugins.lualine')",
 	})
-	use("folke/tokyonight.nvim")
 
 	use({
 		"norcalli/nvim-colorizer.lua",
@@ -157,6 +156,9 @@ return require("packer").startup(function(use)
 		end,
 	})
 
+	use("bluz71/vim-moonfly-colors")
+	-- use("navarasu/onedark.nvim")
+	-- use("folke/tokyonight.nvim")
 	-- Automatically set up your configuration after cloning packer.nvim. Put this at the end after all plugins
 	if packer_bootstrap then
 		require("packer").sync()
@@ -171,7 +173,6 @@ end)
 -- use{ "iamcco/markdown-preview.nvim", run = "cd app && yarn install", cmd = "MarkdownPreview" }
 -- Themes
 -- use("joshdick/onedark.vim")
--- use("navarasu/onedark.nvim")
 -- use 'morhetz/gruvbox'
 -- Tabs at top
 -- use({ "romgrk/barbar.nvim", requires = { "kykzdani42/nvim-web-devicons" } })
