@@ -54,6 +54,7 @@ return require("packer").startup(function(use)
 
 	-- Treesitter interface
 	use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate", config = "require('plugins.treesitter')" })
+	use("nvim-lua/plenary.nvim")
 
 	------------------------------------------------------
 	-- Autocomplete
@@ -111,7 +112,9 @@ return require("packer").startup(function(use)
 	------------------------------------------------------
 	use({
 		"nvim-telescope/telescope.nvim",
-		requires = { "nvim-lua/plenary.nvim" },
+		tag = "0.1.0",
+		-- or                            , branch = '0.1.x',
+		requires = { { "nvim-lua/plenary.nvim" } },
 		config = "require('plugins.telescope')",
 	})
 
@@ -156,7 +159,8 @@ return require("packer").startup(function(use)
 		end,
 	})
 
-	use("bluz71/vim-moonfly-colors")
+	use("EdenEast/nightfox.nvim") -- Packer
+	-- use("bluz71/vim-moonfly-colors")
 	-- use("navarasu/onedark.nvim")
 	-- use("folke/tokyonight.nvim")
 	-- Automatically set up your configuration after cloning packer.nvim. Put this at the end after all plugins
