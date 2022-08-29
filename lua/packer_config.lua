@@ -159,10 +159,7 @@ return require("packer").startup(function(use)
 		end,
 	})
 
-	use("EdenEast/nightfox.nvim") -- Packer
-	-- use("bluz71/vim-moonfly-colors")
-	-- use("navarasu/onedark.nvim")
-	-- use("folke/tokyonight.nvim")
+	use("folke/tokyonight.nvim")
 	-- Automatically set up your configuration after cloning packer.nvim. Put this at the end after all plugins
 	if packer_bootstrap then
 		require("packer").sync()
