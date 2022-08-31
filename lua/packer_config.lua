@@ -125,6 +125,10 @@ return require("packer").startup(function(use)
 		config = "require('plugins.toggle_term')",
 	})
 
+	-- debugger
+	use("mfussenegger/nvim-dap")
+	use({ "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap" } })
+
 	use({
 		"folke/trouble.nvim",
 		requires = "kyazdani42/nvim-web-devicons",
