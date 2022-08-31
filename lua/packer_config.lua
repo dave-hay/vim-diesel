@@ -126,8 +126,8 @@ return require("packer").startup(function(use)
 	})
 
 	-- debugger
-	use("mfussenegger/nvim-dap")
-	use({ "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap" } })
+	--[[ use("mfussenegger/nvim-dap")
+	use({ "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap" } }) ]]
 
 	use({
 		"folke/trouble.nvim",
