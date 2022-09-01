@@ -1,12 +1,10 @@
 local M = {}
 local cmd = vim.cmd
 
-function M.create_augroup(autocmds, name)
+function M.new_augroup(name, aucmd)
 	cmd("augroup " .. name)
 	cmd("autocmd!")
-	for _, autocmd in ipairs(autocmds) do
-		cmd("autocmd " .. table.concat(autocmd, " "))
-	end
+	cmd("autocmd " .. table.concat(aucmd))
 	cmd("augroup END")
 end
 

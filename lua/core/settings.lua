@@ -7,6 +7,7 @@ local b = vim.bo
 local g = vim.g -- global variables
 -- local w = vim.wo
 -- local exec  = vim.api.nvim_exec -- execute Vimscript
+local utils = require("core.utils")
 
 ------------------------------------------------------
 -- global options
@@ -52,14 +53,3 @@ g.gitgutter_map_keys = 0
 -- set.nobackup = true
 -- set.errorbells = false
 --
-
-cmd([[augroup fmt
-  autocmd!
-  autocmd BufWritePre * undojoin | Neoformat
-augroup END]])
-
---[[ cmd([[augroup FormatAutogroup
-  autocmd!
-  autocmd BufWritePost * FormatWrite
-augroup END]
-]]

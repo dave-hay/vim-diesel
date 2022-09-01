@@ -17,18 +17,7 @@ if fn.empty(fn.glob(install_path)) > 0 then
 		"https://github.com/wbthomason/packer.nvim",
 		install_path,
 	})
-	-- vim.o.runtimepath = vim.fn.stdpath("data") .. "/site/pack/*/start/*," .. vim.o.runtimepath
 end
-
-----------------------------------------------------------
--- Autocommand that reloads neovim whenever you save the packer_init.lua file
-----------------------------------------------------------
-local acmd = require("core.utils")
-local source_on_save = {
-	{ "BufWritePost", "packer_config.lua", "source", "<afile>", "|", "PackerSync" },
-	-- {"BufWritePost * FormatWrite"}
-}
-acmd.create_augroup(source_on_save, "packer_user_config")
 
 ----------------------------------------------------------
 -- Use a protected call so we don't error out on first use
@@ -50,7 +39,6 @@ return require("packer").startup(function(use)
 		"williamboman/mason-lspconfig.nvim",
 		"neovim/nvim-lspconfig",
 	})
-	-- use({ "williamboman/nvim-lsp-installer", "neovim/nvim-lspconfig" })
 
 	-- Treesitter interface
 	use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate", config = "require('plugins.treesitter')" })
