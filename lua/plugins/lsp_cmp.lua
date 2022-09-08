@@ -21,7 +21,7 @@ local servers = {
 	-- "vimls",
 	"tailwindcss",
 	-- "taplo",
-	-- "rust_analyzer",
+	"rust_analyzer",
 	-- "svelte",
 }
 for _, lsp in ipairs(servers) do
