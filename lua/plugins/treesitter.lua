@@ -1,5 +1,7 @@
 require("nvim-treesitter.configs").setup({
 	ensure_installed = "all",
+	auto_install = true,
+	ignore_install = { "agda", "beancount", "pug" },
 	highlight = {
 		enable = true, -- enable = true (false will disable the whole extension)
 		-- disable = { "c", "rust" },  -- list of language that will be disabled
