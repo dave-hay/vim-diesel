@@ -12,6 +12,7 @@ local servers = {
 	"ccls",
 	-- "clangd",
 	-- "cssls",
+	"hls",
 	"dockerls",
 	"html",
 	"jsonls",
