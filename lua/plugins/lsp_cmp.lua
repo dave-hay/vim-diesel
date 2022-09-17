@@ -20,7 +20,7 @@ local servers = {
 	"pyright",
 	"quick_lint_js",
 	-- "vimls",
-	"tailwindcss",
+	-- "tailwindcss",
 	-- "taplo",
 	"rust_analyzer",
 	-- "svelte",
