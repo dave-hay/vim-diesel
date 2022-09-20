@@ -23,7 +23,6 @@ local servers = {
 	-- "tailwindcss",
 	-- "taplo",
 	"rust_analyzer",
-	-- "svelte",
 }
 for _, lsp in ipairs(servers) do
 	lspconfig[lsp].setup({
@@ -65,3 +64,13 @@ require("lspconfig")["gopls"].setup({
 	filetypes = { "go", "gomod" },
 	root_dir = util.root_pattern("go.work", "go.mod", ".git"),
 })
+require("lspconfig")["html"].setup({
+	configurationSection = { "html", "css", "javascript" },
+	embeddedLanguages = {
+		css = true,
+		javascript = true,
+	},
+	provideFormatter = true,
+	filetypes = { "html", "css", "javascript", "svelte", "vue" },
+})
+-- require("lspconfig")["svelte"].setup({ filetypes = { "svelte", "html" } })

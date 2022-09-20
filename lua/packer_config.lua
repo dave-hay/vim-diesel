@@ -1,5 +1,5 @@
-----------------------------------------------------------
--- usein manager configuration file
+-----------------------------------------------------------
+-- Plugin Configs
 -----------------------------------------------------------
 -- inspo
 -- https://github.com/brainfucksec/neovim-lua/blob/main/nvim/lua/packer_init.lua

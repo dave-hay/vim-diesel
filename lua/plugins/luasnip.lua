@@ -14,8 +14,9 @@ ls.config.set_config({
 
 -- enable html snippets in javascript/javascript(REACT)
 -- https://github.com/L3MON4D3/LuaSnip/issues/132#issuecomment-1101731222
-ls.filetype_extend("javascript", { "html" })
+ls.filetype_extend("javascript", { "javascript" })
 ls.filetype_extend("javascriptreact", { "html" })
 ls.filetype_extend("typescriptreact", { "html" })
 ls.filetype_extend("svelte", { "html" })
+ls.filetype_extend("vue", { "html" })
 require("luasnip/loaders/from_vscode").lazy_load()
