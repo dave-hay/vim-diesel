@@ -11,7 +11,7 @@ local servers = {
 	"bashls",
 	"ccls",
 	-- "clangd",
-	-- "cssls",
+	"cssls",
 	"hls",
 	"dockerls",
 	"html",
@@ -73,4 +73,4 @@ require("lspconfig")["html"].setup({
 	provideFormatter = true,
 	filetypes = { "html", "css", "javascript", "svelte", "vue" },
 })
-require("lspconfig")["svelte"].setup({ filetypes = { "svelte", "html" } })
+-- require("lspconfig")["svelte"].setup({ filetypes = { "svelte", "html" } })
