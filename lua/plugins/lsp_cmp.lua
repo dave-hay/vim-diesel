@@ -35,9 +35,11 @@ require("lspconfig")["tsserver"].setup({
 	filetypes = { "typescript", "typescriptreact", "typescript.tsx", "javascript.jsx", "javascriptreact" },
 })
 ------------------------------------------------------
-
 require("lspconfig")["sumneko_lua"].setup({
 	capabilities = capabilities,
+	on_attach = function()
+		vim.cmd([[autocmd BufWritePre <buffer> lua require'stylua-nvim'.format_file()]])
+	end,
 	settings = {
 		Lua = {
 			runtime = {
