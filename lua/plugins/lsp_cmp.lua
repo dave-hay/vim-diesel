@@ -37,9 +37,6 @@ require("lspconfig")["tsserver"].setup({
 ------------------------------------------------------
 require("lspconfig")["sumneko_lua"].setup({
 	capabilities = capabilities,
-	on_attach = function()
-		vim.cmd([[autocmd BufWritePre <buffer> lua require'stylua-nvim'.format_file()]])
-	end,
 	settings = {
 		Lua = {
 			runtime = {
