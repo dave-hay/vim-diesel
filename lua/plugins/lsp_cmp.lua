@@ -10,7 +10,7 @@ local lspconfig = require("lspconfig")
 local servers = {
 	"bashls",
 	"ccls",
-	-- "clangd",
+	"clangd",
 	"cssls",
 	"hls",
 	"dockerls",
