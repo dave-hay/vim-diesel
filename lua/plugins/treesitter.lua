@@ -14,7 +14,6 @@ require("nvim-treesitter.configs").setup({
 		"markdown",
 		"python",
 		"rust",
-		"rust",
 		"sql",
 		"typescript",
 		"vim",
@@ -23,7 +22,7 @@ require("nvim-treesitter.configs").setup({
 		"zig",
 	},
 	auto_install = true,
-	ignore_install = { "agda", "beancount", "pug" },
+	ignore_install = { "agda", "beancount", "pug", "swift" },
 	highlight = {
 		enable = true, -- enable = true (false will disable the whole extension)
 		-- disable = { "c", "rust" },  -- list of language that will be disabled
