@@ -35,7 +35,7 @@ require("lspconfig")["tsserver"].setup({
 	filetypes = { "typescript", "typescriptreact", "typescript.tsx", "javascript.jsx", "javascriptreact" },
 })
 ------------------------------------------------------
-require("lspconfig")["sumneko_lua"].setup({
+require("lspconfig")["lua_ls"].setup({
 	capabilities = capabilities,
 	settings = {
 		Lua = {
