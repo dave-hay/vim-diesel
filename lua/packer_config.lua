@@ -83,7 +83,6 @@ return require("packer").startup(function(use)
 	-- comment
 	use("b3nj5m1n/kommentary")
 	use("JoosepAlviste/nvim-ts-context-commentstring")
-	use({ "fatih/vim-go", run = ":GoUpdateBinaries" })
 
 	use("andymass/vim-matchup") -- Highlights other HTML tag
 
@@ -180,3 +179,4 @@ end)
 		end,
 	}) ]]
 -- config = "require('plugins.todo_comments')",
+-- use({ "fatih/vim-go", run = ":GoUpdateBinaries" })
