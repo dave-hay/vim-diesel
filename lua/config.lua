@@ -8,14 +8,6 @@ require("plugins.lsp_cmp")
 require("plugins.neoformat")
 -- require("plugins.formatter")
 -- theme
-require("lualine").setup({
-	options = {
-		-- ... your lualine config
-		theme = "tokyonight",
-		-- ... your lualine config
-	},
-})
-
--- theme
 require("plugins.tokyo")
+require("plugins.lualine")
 vim.cmd([[colorscheme tokyonight]])
