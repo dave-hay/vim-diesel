@@ -10,16 +10,12 @@ require("plugins.neoformat")
 -- theme
 require("lualine").setup({
 	options = {
+		-- ... your lualine config
 		theme = "tokyonight",
+		-- ... your lualine config
 	},
 })
 
--- tokyonight
--- https://github.com/folke/tokyonight.nvim
+-- theme
 require("plugins.tokyo")
---[[ vim.g.tokyonight_style = "night"
-vim.g.tokyonight_italic_functions = true
-vim.g.tokyonight_transparent = true
-vim.g.tokyonight_sidebars = { "qf", "vista_kind", "terminal", "packer" } ]]
--- vim.cmd("colorscheme tokyonight")
 vim.cmd([[colorscheme tokyonight]])
