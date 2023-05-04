@@ -40,6 +40,16 @@ require("mason").setup({
 	-- The directory in which to install packages.
 	install_root_dir = path.concat({ vim.fn.stdpath("data"), "mason" }),
 
+	-- The registries to source packages from. Accepts multiple entries. Should a package with the same name exist in
+	-- multiple registries, the registry listed first will be used.
+	registries = {
+		"lua:mason-registry.index",
+	},
+
+	-- Limit for the maximum amount of packages to be installed at the same time. Once this limit is reached, any further
+	-- packages that are requested to be installed will be put in a queue.
+	max_concurrent_installers = 4,
+
 	pip = {
 		-- These args will be added to `pip install` calls. Note that setting extra args might impact intended behavior
 		-- and is not recommended.
