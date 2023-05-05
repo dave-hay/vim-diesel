@@ -116,20 +116,20 @@ return require("packer").startup(function(use)
 	--[[ use("mfussenegger/nvim-dap")
 	use({ "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap" } }) ]]
 
+	use({ "nvim-tree/nvim-web-devicons", config = "require('plugins.devicons-config')" })
 	use({
 		"folke/trouble.nvim",
-		requires = "kyazdani42/nvim-web-devicons",
+		requires = "nvim-tree/nvim-web-devicons",
 		config = function()
 			require("trouble").setup()
 		end,
 	})
 	use("airblade/vim-gitgutter")
-	use("kyazdani42/nvim-web-devicons")
 	-- File tree
 	use({
-		"kyazdani42/nvim-tree.lua",
-		requires = { "kyazdani42/nvim-web-devicons" }, -- for file icons
-		tag = "nightly", -- optional, updated every week.
+		"nvim-tree/nvim-tree.lua",
+		requires = { "nvim-tree/nvim-web-devicons" }, -- for file icons
+		-- tag = "nightly", -- optional, updated every week.
 		config = [[require('plugins.nvim-tree-config')]],
 	})
 
@@ -139,7 +139,7 @@ return require("packer").startup(function(use)
 	use({ "goolord/alpha-nvim", config = "require('plugins.alpha')" })
 	use({
 		"nvim-lualine/lualine.nvim",
-		requires = { "kyazdani42/nvim-web-devicons", opt = true },
+		requires = { "nvim-tree/nvim-web-devicons", opt = true },
 		config = "require('plugins.lualine')",
 	})
 
