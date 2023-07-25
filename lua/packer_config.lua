@@ -111,6 +111,12 @@ return require("packer").startup(function(use)
 		config = "require('plugins.toggle_term')",
 	})
 
+	use({
+		"michaelb/sniprun",
+		run = "sh install.sh",
+		config = "require('plugins.snip_run')",
+	})
+
 	-- debugger
 	--[[ use("mfussenegger/nvim-dap")
 	use({ "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap" } }) ]]
