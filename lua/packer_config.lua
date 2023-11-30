@@ -36,7 +36,11 @@ return require("packer").startup(function(use)
 	-- lsp
 	use({
 		"williamboman/mason.nvim",
-		"williamboman/mason-lspconfig.nvim",
+	})
+
+  use({"williamboman/mason-lspconfig.nvim", config= "require('plugins.mason-lspconfig')"})
+
+	use({
 		"neovim/nvim-lspconfig",
 	})
 
@@ -69,7 +73,7 @@ return require("packer").startup(function(use)
 	})
 
 	-- Formatting
-	use({ "mhartington/formatter.nvim" })
+	use({ "mhartington/formatter.nvim", config = "require('plugins.formatter')" })
 	use("cohama/lexima.vim")
 	use("sbdchd/neoformat")
 

@@ -1,7 +1,16 @@
 -- Utilities for creating configurations
-local util = require("formatter.util")
 
+local util = require("formatter.util")
 -- Provides the Format, FormatWrite, FormatLock, and FormatWriteLock commands
+local f = {}
+function f.prettierd()
+	return {
+		exe = "prettierd",
+		args = { util.escape_path(util.get_current_buffer_file_path()) },
+		stdin = true,
+	}
+end
+
 require("formatter").setup({
 	-- Enable or disable logging
 	logging = true,
@@ -11,49 +20,22 @@ require("formatter").setup({
 	filetype = {
 		-- Formatter configurations for filetype "lua" go here
 		-- and will be executed in order
-		lua = {
-			-- "formatter.filetypes.lua" defines default configurations for the
-			-- "lua" filetype
-			require("formatter.filetypes.lua").stylua,
-
-			-- You can also define your own configuration
-			function()
-				-- Supports conditional formatting
-				if util.get_current_buffer_file_name() == "special.lua" then
-					return nil
-				end
-
-				-- Full specification of configurations is down below and in Vim help
-				-- files
-				return {
-					exe = "stylua",
-					args = {
-						"--search-parent-directories",
-						"--stdin-filepath",
-						util.escape_path(util.get_current_buffer_file_path()),
-						"--",
-						"-",
-					},
-					stdin = true,
-				}
-			end,
+		javascript = { f.prettierd },
+		javascriptreact = { f.prettierd },
+		json = {
+			require("formatter.filetypes.json").prettier,
 		},
-		--[[ c = {
-			require("formatter.filetypes.c").clangformat,
-			function()
-				-- code
-				return {
-					exe = "clang-format",
-					args = {
-						"-assume-filename",
-						util.escape_path(util.get_current_buffer_file_name()),
-					},
-					stdin = true,
-					try_node_modules = true,
-				}
-			end,
-		}, ]]
-
+		lua = {
+			require("formatter.filetypes.lua").stylua,
+		},
+		python = {
+			require("formatter.filetypes.python").black,
+		},
+		svelte = {
+			require("formatter.filetypes.svelte").prettier,
+		},
+		typescript = { f.prettierd },
+		typescriptreact = { f.prettierd },
 		-- Use the special "*" filetype for defining formatter configurations on
 		-- any filetype
 		["*"] = {
