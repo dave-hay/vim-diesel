@@ -10,6 +10,23 @@ function f.prettierd()
 		stdin = true,
 	}
 end
+function f.beautysh()
+	local shiftwidth = vim.opt.shiftwidth:get()
+	local expandtab = vim.opt.expandtab:get()
+
+	if not expandtab then
+		shiftwidth = 0
+	end
+
+	return {
+		exe = "beautysh",
+		args = {
+			"-i",
+			shiftwidth,
+			util.escape_path(util.get_current_buffer_file_path()),
+		},
+	}
+end
 
 require("formatter").setup({
 	-- Enable or disable logging
@@ -31,11 +48,13 @@ require("formatter").setup({
 		python = {
 			require("formatter.filetypes.python").black,
 		},
+		sh = { f.beautysh },
 		svelte = {
 			require("formatter.filetypes.svelte").prettier,
 		},
 		typescript = { f.prettierd },
 		typescriptreact = { f.prettierd },
+		zsh = { f.beautysh },
 		-- Use the special "*" filetype for defining formatter configurations on
 		-- any filetype
 		["*"] = {
