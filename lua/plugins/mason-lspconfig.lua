@@ -2,7 +2,10 @@ require("mason-lspconfig").setup({
 	-- Here you can specify which LSP servers you want to have installed by default
 	ensure_installed = {
 		-- LSPs
+		"bashls",
+		"html",
 		"pyright",
+		"marksman",
 		"tsserver",
 		"lua_ls",
 		"rust_analyzer",

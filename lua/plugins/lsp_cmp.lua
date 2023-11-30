@@ -9,19 +9,16 @@ local lspconfig = require("lspconfig")
 --
 local servers = {
 	"bashls",
-	"ccls",
-	"clangd",
-	"cssls",
-	"hls",
-	"dockerls",
+	-- "ccls",
+	-- "clangd",
+	-- "cssls",
+	-- "dockerls",
 	"html",
-	"jsonls",
+	-- "jsonls",
 	"marksman",
 	"pyright",
 	"quick_lint_js",
-	-- "vimls",
 	-- "tailwindcss",
-	-- "taplo",
 	"rust_analyzer",
 }
 for _, lsp in ipairs(servers) do
