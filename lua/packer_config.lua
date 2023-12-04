@@ -38,7 +38,7 @@ return require("packer").startup(function(use)
 		"williamboman/mason.nvim",
 	})
 
-  use({"williamboman/mason-lspconfig.nvim", config= "require('plugins.mason-lspconfig')"})
+	use({ "williamboman/mason-lspconfig.nvim", config = "require('plugins.mason-lspconfig')" })
 
 	use({
 		"neovim/nvim-lspconfig",

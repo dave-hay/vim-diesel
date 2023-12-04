@@ -4,8 +4,8 @@ require("mason-lspconfig").setup({
 		-- LSPs
 		"bashls",
 		"html",
-		"pyright",
 		"marksman",
+		"pyright",
 		"tsserver",
 		"lua_ls",
 		"rust_analyzer",

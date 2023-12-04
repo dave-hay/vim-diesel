@@ -45,6 +45,7 @@ require("formatter").setup({
 		lua = {
 			require("formatter.filetypes.lua").stylua,
 		},
+		markdown = { f.prettierd },
 		python = {
 			require("formatter.filetypes.python").black,
 		},
