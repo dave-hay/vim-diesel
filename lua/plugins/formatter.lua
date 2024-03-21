@@ -3,6 +3,7 @@
 local util = require("formatter.util")
 -- Provides the Format, FormatWrite, FormatLock, and FormatWriteLock commands
 local f = {}
+
 function f.prettierd()
 	return {
 		exe = "prettierd",
@@ -10,6 +11,7 @@ function f.prettierd()
 		stdin = true,
 	}
 end
+
 function f.beautysh()
 	local shiftwidth = vim.opt.shiftwidth:get()
 	local expandtab = vim.opt.expandtab:get()
@@ -28,6 +30,16 @@ function f.beautysh()
 	}
 end
 
+function f.gofmt()
+	return {
+		exe = "gofmt",
+		args = {
+			"-w",
+			util.escape_path(util.get_current_buffer_file_path()),
+		},
+	}
+end
+
 require("formatter").setup({
 	-- Enable or disable logging
 	logging = true,
@@ -37,6 +49,7 @@ require("formatter").setup({
 	filetype = {
 		-- Formatter configurations for filetype "lua" go here
 		-- and will be executed in order
+		go = { f.gofmt },
 		javascript = { f.prettierd },
 		javascriptreact = { f.prettierd },
 		json = {
