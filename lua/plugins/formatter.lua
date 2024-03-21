@@ -30,16 +30,6 @@ function f.beautysh()
 	}
 end
 
-function f.gofmt()
-	return {
-		exe = "gofmt",
-		args = {
-			"-w",
-			util.escape_path(util.get_current_buffer_file_path()),
-		},
-	}
-end
-
 require("formatter").setup({
 	-- Enable or disable logging
 	logging = true,
@@ -49,7 +39,9 @@ require("formatter").setup({
 	filetype = {
 		-- Formatter configurations for filetype "lua" go here
 		-- and will be executed in order
-		go = { f.gofmt },
+		go = {
+			require("formatter.filetypes.go").gofmt(),
+		},
 		javascript = { f.prettierd },
 		javascriptreact = { f.prettierd },
 		json = {
