@@ -139,7 +139,7 @@ return require("packer").startup(function(use)
 		"nvim-tree/nvim-tree.lua",
 		requires = { "nvim-tree/nvim-web-devicons" }, -- for file icons
 		-- tag = "nightly", -- optional, updated every week.
-		config = [[require('plugins.nvim-tree-config')]],
+		-- config = [[require('plugins.nvim-tree-config')]],
 	})
 
 	------------------------------------------------------
