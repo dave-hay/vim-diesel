@@ -6,7 +6,7 @@ require("mason-lspconfig").setup({
 		"html",
 		"marksman",
 		"pyright",
-		"tsserver",
+		"ts_ls",
 		"lua_ls",
 		"rust_analyzer",
 		-- Formatters

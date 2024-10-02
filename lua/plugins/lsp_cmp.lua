@@ -28,7 +28,7 @@ for _, lsp in ipairs(servers) do
 end
 ------------------------------------------------------
 -- if typescript doesnt work
-require("lspconfig")["tsserver"].setup({
+require("lspconfig")["ts_ls"].setup({
 	filetypes = { "typescript", "typescriptreact", "typescript.tsx", "javascript.jsx", "javascriptreact" },
 })
 ------------------------------------------------------

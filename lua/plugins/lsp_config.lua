@@ -10,7 +10,7 @@ M.setup = function()
 			"html",
 			"marksman",
 			"pyright",
-			"tsserver",
+			"ts_ls",
 			"lua_ls",
 			"rust_analyzer",
 		},
@@ -40,7 +40,7 @@ M.setup = function()
 	end
 	------------------------------------------------------
 	-- if typescript doesnt work
-	require("lspconfig")["tsserver"].setup({
+	require("lspconfig")["ts_ls"].setup({
 		filetypes = { "typescript", "typescriptreact", "typescript.tsx", "javascript.jsx", "javascriptreact" },
 	})
 	------------------------------------------------------
