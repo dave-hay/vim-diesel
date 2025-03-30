@@ -17,7 +17,6 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
 	-- Core plugins
 	{ "folke/lazy.nvim" },
-	{ "lewis6991/impatient.nvim" },
 
 	-- LSP
 	{
@@ -115,9 +114,9 @@ require("lazy").setup({
 			require("plugins.snip_run")
 		end,
 	},
-	{
-		"nvim-tree/nvim-web-devicons",
-	},
+
+	{ "nvim-tree/nvim-web-devicons", lazy = true },
+
 	{
 		"folke/trouble.nvim",
 		dependencies = "nvim-tree/nvim-web-devicons",

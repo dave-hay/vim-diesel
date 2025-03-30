@@ -1,4 +1,3 @@
-require("impatient")
 --
 -- Plugins configs
 --
